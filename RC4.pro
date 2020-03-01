@@ -26,9 +26,11 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
+        rc4.cpp \
         widget.cpp
 
 HEADERS += \
+        rc4.h \
         widget.h
 
 FORMS += \

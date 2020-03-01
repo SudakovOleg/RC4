@@ -15,6 +15,9 @@ public:
   explicit Widget(QWidget *parent = nullptr);
   ~Widget();
 
+private slots:
+  void on_WorkPB_clicked();
+
 private:
   Ui::Widget *ui;
 };
