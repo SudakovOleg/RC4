@@ -1,9 +1,11 @@
 #include "rc4.h"
 #include <QByteArray>
-#include <QChar>
 
+//Конструктор
 RC4::RC4(QByteArray key)
 {
+  //Инициализируем последовательность на основе ключа
+  //KSA
   S = new QByteArray[256];
   for (int i(0); i < 256; i++)
   {
@@ -22,6 +24,7 @@ RC4::RC4(QByteArray key)
   }
 }
 
+//Метод шифровки и дишифровки
 QByteArray RC4::work(QByteArray data)
 {
   QByteArray result;
@@ -34,6 +37,8 @@ QByteArray RC4::work(QByteArray data)
   return result;
 }
 
+//Метод генерации псевдослучайного слова
+//PRGA
 QByteArray RC4::keyItem()
 {
   x = (x + 1) % 256;

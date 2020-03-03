@@ -14,6 +14,7 @@ Widget::~Widget()
   delete ui;
 }
 
+//Реакция на нажатие кнопки - процесс работы
 void Widget::on_WorkPB_clicked()
 {
   QString key = ui->KeyTextLine->text();
