@@ -17,6 +17,8 @@ Widget::~Widget()
 //Реакция на нажатие кнопки - процесс работы
 void Widget::on_WorkPB_clicked()
 {
+  if(ui->KeyTextLine->text().isEmpty())
+    return;
   QString key = ui->KeyTextLine->text();
   RC4 rc(key.toUtf8());
   if(!ui->SourcesText->toPlainText().isEmpty())
